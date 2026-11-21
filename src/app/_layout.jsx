@@ -7,10 +7,6 @@ const Layout = () => {
                 headerStyle: {
                     backgroundColor: "#ffff"
                 },
-                headerTintColor: "#FFFF",
-                headerTitleStyle: {
-                    fontWeight: 'bold'
-                },
                 headerTitleAlign: "center"
             }}
         >

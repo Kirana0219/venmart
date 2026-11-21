@@ -16,12 +16,14 @@ const CategoryCard = ({item, isSelected, onPress}) => {
                     marginRight: 6,
                     gap: 14,
                     borderRadius: 50,
+                    borderWidth: 1,
+                    borderColor: theme.colors.primary20
                 }
             }
         >
             <Text style={{
                 color: isSelected ? theme.colors.white : theme.colors.black,
-                fontFamily: theme.fontFamily.semibold,
+                fontWeight: "600"
             }}>
                 {item.title}
             </Text>

@@ -16,7 +16,7 @@ const NewsScreen = () => {
             </View>
 
             <CategoryList/>
-    
+
         </View>
    );
 }
@@ -24,10 +24,10 @@ const NewsScreen = () => {
 const styles = StyleSheet.create({
     continer: {
         flex: 1,
-        padding: 8,
-        marginTop: 10,
-        marginHorizontal: 12,
+        paddingTop: 16,
+        paddingHorizontal: 18,
         gap: 14,
+        backgroundColor: theme.colors.white
     },
     searchContainer: {
         flexDirection: "row",
@@ -37,6 +37,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 4,
         borderRadius: 50,
+        borderWidth: 1,
+        borderColor: theme.colors.primary20
     },
     searchInput: {
         fontSize: 16,
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     },
     searchIcon: {
         fontSize: 16,
-        color: "#797979",
+        color: theme.colors.primary80,
         fontWeight: "600"
     }
 })
