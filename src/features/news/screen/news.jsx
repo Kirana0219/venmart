@@ -47,11 +47,12 @@ const styles = StyleSheet.create({
         borderColor: theme.colors.primary20
     },
     searchInput: {
+        fontFamily: theme.fontFamily.regular,
         fontSize: 16,
         fontWeight: "400"
     },
     searchIcon: {
-        fontSize: 16,
+        fontSize: 18,
         color: theme.colors.primary80,
         fontWeight: "600"
     },
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     },
     futuredNewsText: {
         fontSize: theme.fontSizes.lg,
-        fontWeight: "600"
+        fontFamily: theme.fontFamily.semibold
     }
 })
 

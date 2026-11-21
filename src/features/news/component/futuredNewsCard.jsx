@@ -49,35 +49,38 @@ const styles = StyleSheet.create({
     category: {
         marginHorizontal: 6,
         backgroundColor: theme.colors.primary20,
-        padding: 6,
+        padding: 4,
         paddingHorizontal: 12,
         alignSelf: "flex-start",
         borderRadius: 50,
     },
     categoryText: {
+        fontFamily: theme.fontFamily.regular,
         color: theme.colors.primary100,
         fontWeight: '600',
     },
     date: {
+        fontFamily: theme.fontFamily.medium,
         fontWeight: "600",
         paddingHorizontal: 6,
         fontSize: theme.fontSizes.body,
+        color: "#7c7c7c"
     },
     content: {
         padding: 4,
         gap: 4
     },
     title: {
+        fontFamily: theme.fontFamily.semibold,
         fontSize: 21,
         paddingHorizontal: 8,
         fontWeight: "600"
     },
     subContent: {
         paddingHorizontal: 6,
-        fontWeight: "400",
+        fontFamily: theme.fontFamily.regular,
         fontSize: 16,
         color: "#7c7c7c"
-
     }
 })
 export default FuturedNewsCard;
