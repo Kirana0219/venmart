@@ -1,8 +1,9 @@
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, View } from "react-native";
 import { Stack } from "expo-router";
 import theme from "../../theme/theme";
+import CustomButton from "../../components/customButton";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Stack.Screen options={{ headerShown: false }} />
       <View style={styles.container}>
         <Text style={styles.title}>Ini halaman Home</Text>
+        <CustomButton title="Login"/>
       </View>
     </SafeAreaView>
   );
@@ -20,6 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItem: "center",
+    margin: theme.spacing.xxl,
   },
   title: {
     fontFamily: theme.fontFamily.bold,
