@@ -11,7 +11,8 @@ const Layout = () => {
                 headerTitleStyle: {
                     fontWeight: 'bold'
                 },
-        }}
+                headerTitleAlign: "center"
+            }}
         >
             <Stack.Screen name="(tabs)" options={{headerShown: false}}/>
         </Stack>
