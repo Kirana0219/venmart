@@ -1,4 +1,4 @@
-import { Color, Tabs } from "expo-router";
+import { Tabs } from "expo-router";
 import Lucide from "@react-native-vector-icons/lucide";
 
 const TabsLayout = () => {
