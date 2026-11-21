@@ -1,18 +1,22 @@
-import { Stack } from "expo-router";
+import { Stack } from 'expo-router';
 
 const Layout = () => {
     return (
-        <Stack 
+        <Stack
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: "#ffff"
+                    backgroundColor: 'red',
                 },
-                headerTitleAlign: "center"
+                headerTintColor: '#FFFF',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+                headerTitleAlign: 'center',
             }}
         >
-            <Stack.Screen name="(tabs)" options={{headerShown: false}}/>
+            <Stack.Screen name='(tabs)' options={{headerShown: false}}/>
         </Stack>
     );
-}
+};
 
 export default Layout;

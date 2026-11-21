@@ -47,7 +47,7 @@ const theme = {
     xl: 28,
     lg: 24,
     md: 20,
-    body: 17,
+    body: 16,
     sm: 14,
     xs: 12,
     xxs: 10,

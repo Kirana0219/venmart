@@ -1,8 +1,9 @@
 import React from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import CategoryList from "../component/categoryList";
 import Lucide from "@react-native-vector-icons/lucide";
 import theme from "../../../theme/theme";
+import FuturedNewsList from "../component/futuredNewsList";
 
 const NewsScreen = () => {
    return(
@@ -16,6 +17,11 @@ const NewsScreen = () => {
             </View>
 
             <CategoryList/>
+            
+            <View style={styles.futuredNewsContainer}>
+                <Text style={styles.futuredNewsText}>Futured News</Text>
+                <FuturedNewsList/>
+            </View>
 
         </View>
    );
@@ -47,6 +53,13 @@ const styles = StyleSheet.create({
     searchIcon: {
         fontSize: 16,
         color: theme.colors.primary80,
+        fontWeight: "600"
+    },
+    futuredNewsContainer: {
+        paddingTop: 10,
+    },
+    futuredNewsText: {
+        fontSize: theme.fontSizes.lg,
         fontWeight: "600"
     }
 })
