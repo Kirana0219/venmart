@@ -3,10 +3,10 @@ import news from "../data/dataNews";
 import { FlatList, View } from "react-native";
 import LatestNewsCard from "./latestNewsCard";
 
-const LatestNewsList = () => {
+const LatestNewsList = ({item, onPress}) => {
 
     const latestNews = news.filter(item => 
-        [1,2,5,8,10,11,15,16,22,24].includes(item.id));
+        [1,2,5,8,10,11,17,16,23,24].includes(item.id));
 
     return (
         <View>
@@ -16,7 +16,10 @@ const LatestNewsList = () => {
                 showsVerticalScrollIndicator={false}
 
                 renderItem={({item}) => (
-                    <LatestNewsCard item={item}/>
+                    <LatestNewsCard 
+                        item={item}
+                        onPress={() => onPress(item)}
+                    />
                 )}
             />
         </View>

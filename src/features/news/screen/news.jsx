@@ -5,8 +5,13 @@ import Lucide from "@react-native-vector-icons/lucide";
 import theme from "../../../theme/theme";
 import FuturedNewsList from "../component/futuredNewsList";
 import LatestNewsList from "../component/latestNewsList";
+import { useRouter } from "expo-router";
 
 const NewsScreen = () => {
+
+    const router = useRouter();
+    const handleNews = (item) => router.push(`/news/${item.id}`);
+
    return(
     <ScrollView>
         <View style={styles.continer}>
@@ -22,12 +27,16 @@ const NewsScreen = () => {
             
             <View style={styles.futuredNewsContainer}>
                 <Text style={styles.futuredNewsText}>Futured News</Text>
-                <FuturedNewsList/>
+                <FuturedNewsList
+                    onPress={handleNews}
+                />
             </View>
 
             <View style={styles.latestNewsContainer}>
                 <Text style={styles.latestNewsText}>Latest News</Text>
-                <LatestNewsList/>
+                <LatestNewsList
+                    onPress={handleNews}
+                />
             </View>
 
         </View>

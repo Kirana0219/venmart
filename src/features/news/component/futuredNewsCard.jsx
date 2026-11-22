@@ -1,26 +1,31 @@
 import React from "react";
 import theme from "../../../theme/theme";
-import { Image, View, Text, StyleSheet } from "react-native";
+import { Image, View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const FuturedNewsCard = ({item, onPress}) => {
     return(
-        <View style={styles.card}>
+        <TouchableOpacity
+            style={styles.card}
+            onPress={onPress}
+            activeOpacity={0.8}
+        >   
             <Image
                 source={{ uri: item.image }}
                 style={styles.image}
             />
-            <View style={styles.categoryContainer}>
-                <View style={styles.category}>
-                    <Text style={styles.categoryText}>{item.category}</Text>
+                <View style={styles.categoryContainer}>
+                    <View style={styles.category}>
+                        <Text style={styles.categoryText}>{item.category}</Text>
+                    </View>
+                    <Text style={styles.date}>{item.date}</Text>
                 </View>
-                <Text style={styles.date}>{item.date}</Text>
-            </View>
 
-            <View style={styles.content}>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.subContent}>{item.subContent}</Text>
-            </View>
-        </View>
+                <View style={styles.content}>
+                    <Text style={styles.title}>{item.title}</Text>
+                    <Text style={styles.subContent}>{item.subContent}</Text>
+                </View>
+            
+        </TouchableOpacity>
     );
 }
 

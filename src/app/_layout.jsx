@@ -37,9 +37,11 @@ const Layout = () => {
           backgroundColor: "#ffff",
         },
         headerTitleAlign: "center",
+        headerShadowVisible: false,
       }}
     >
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="news/[id]" options={{ headerShown: true, headerTitle: "Detail News" }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false}} />
     </Stack>
   );
 };

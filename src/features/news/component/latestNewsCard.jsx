@@ -1,10 +1,14 @@
 import React from "react";
 import theme from "../../../theme/theme";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const LatestNewsCard = ({ item, onPress }) => {
     return (
-        <View style={styles.card}>
+        <TouchableOpacity 
+            style={styles.card}
+            onPress={onPress}
+            activeOpacity={0.8}
+        >
             <Image
                 source={{ uri: item.image }}
                 style={styles.image}
@@ -19,7 +23,7 @@ const LatestNewsCard = ({ item, onPress }) => {
                     <Text style={styles.readTime}>{item.readTime}</Text>
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 

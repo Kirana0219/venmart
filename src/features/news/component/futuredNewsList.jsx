@@ -4,10 +4,10 @@ import { FlatList, View } from "react-native";
 import news from "../data/dataNews";
 import FuturedNewsCard from "./futuredNewsCard";
 
-const FuturedNewsList = () => {
+const FuturedNewsList = ({item, onPress}) => {
 
     const featuredNews = news.filter(item =>
-        [1, 5, 10].includes(item.id)
+        [22,17,15,20,7].includes(item.id)
     );
 
     return (
@@ -21,7 +21,10 @@ const FuturedNewsList = () => {
                     <View style={{ width: 12 }} />
                 )}
                 renderItem={({ item }) => (
-                    <FuturedNewsCard item={item} />
+                    <FuturedNewsCard 
+                        item={item} 
+                        onPress={() => onPress(item)}
+                    />
                 )}
             />
         </View>
