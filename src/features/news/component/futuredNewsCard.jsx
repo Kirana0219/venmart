@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         paddingHorizontal: 6,
         fontSize: theme.fontSizes.body,
-        color: "#7c7c7c"
+        color: theme.colors.neutral60
     },
     content: {
         padding: 4,

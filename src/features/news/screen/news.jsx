@@ -13,7 +13,7 @@ const NewsScreen = () => {
     const handleNews = (item) => router.push(`/news/${item.id}`);
 
    return(
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.continer}>
             <View style={styles.searchContainer}>
                 <Lucide name="search" style={styles.searchIcon}/>
@@ -66,12 +66,12 @@ const styles = StyleSheet.create({
     searchInput: {
         fontFamily: theme.fontFamily.regular,
         fontSize: 16,
-        fontWeight: "400"
+        fontWeight: "400",
     },
     searchIcon: {
         fontSize: 18,
         color: theme.colors.primary80,
-        fontWeight: "600"
+        fontWeight: "600",
     },
     futuredNewsContainer: {
         marginTop: 8,
