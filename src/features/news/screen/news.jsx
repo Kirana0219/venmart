@@ -1,12 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import CategoryList from "../component/categoryList";
 import Lucide from "@react-native-vector-icons/lucide";
 import theme from "../../../theme/theme";
 import FuturedNewsList from "../component/futuredNewsList";
+import LatestNewsList from "../component/latestNewsList";
 
 const NewsScreen = () => {
    return(
+    <ScrollView>
         <View style={styles.continer}>
             <View style={styles.searchContainer}>
                 <Lucide name="search" style={styles.searchIcon}/>
@@ -23,7 +25,13 @@ const NewsScreen = () => {
                 <FuturedNewsList/>
             </View>
 
+            <View style={styles.latestNewsContainer}>
+                <Text style={styles.latestNewsText}>Latest News</Text>
+                <LatestNewsList/>
+            </View>
+
         </View>
+    </ScrollView>
    );
 }
 
@@ -32,7 +40,7 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 16,
         paddingHorizontal: 18,
-        gap: 14,
+        gap: 12,
         backgroundColor: theme.colors.white
     },
     searchContainer: {
@@ -57,11 +65,19 @@ const styles = StyleSheet.create({
         fontWeight: "600"
     },
     futuredNewsContainer: {
-        paddingTop: 10,
+        marginTop: 8,
     },
     futuredNewsText: {
         fontSize: theme.fontSizes.lg,
         fontFamily: theme.fontFamily.semibold
+    },
+    latestNewsContainer: {
+        marginTop: 8
+    },
+    latestNewsText: {
+        fontFamily: theme.fontFamily.semibold,
+        fontSize: theme.fontSizes.lg,
+
     }
 })
 

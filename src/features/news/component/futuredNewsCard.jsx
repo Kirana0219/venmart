@@ -29,11 +29,12 @@ const styles = StyleSheet.create({
         width: 280,
         borderRadius: 14,
         overflow: "hidden",
-        marginTop: 12,
+        gap: 2,
         paddingBottom: 16,
         borderWidth: 0.5,
         borderColor: theme.colors.neutral20,
         gap: 6,
+        marginTop: 4,
     },
     image: {
         width: "100%",
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
     category: {
         marginHorizontal: 6,
         backgroundColor: theme.colors.primary20,
-        padding: 4,
+        padding: 2,
         paddingHorizontal: 12,
         alignSelf: "flex-start",
         borderRadius: 50,
