@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, Text } from "react-native";
 import theme from "../../../theme/theme";
 
-const CategoryCard = ({item, isSelected, onPress}) => {
+const CategoryCard = ({onPress, item, isSelected}) => {
     return (
         <TouchableOpacity
             onPress={onPress}
@@ -11,8 +11,8 @@ const CategoryCard = ({item, isSelected, onPress}) => {
                     backgroundColor: isSelected ? theme.colors.primary100 : theme.colors.white,  
                     fontSize: theme.fontSizes.xs,
                     alignSelf: "flex-start",
-                    paddingHorizontal: 16,
-                    paddingVertical: 5,
+                    paddingHorizontal: 12,
+                    paddingVertical: 4,
                     marginRight: 6,
                     borderRadius: 50,
                     borderWidth: 1,
@@ -22,8 +22,8 @@ const CategoryCard = ({item, isSelected, onPress}) => {
         >
             <Text style={{
                 color: isSelected ? theme.colors.white : theme.colors.black,
-                fontWeight: "600",
-                fontFamily: theme.fontFamily.semibold
+                fontFamily: theme.fontFamily.medium,
+                fontSize: 14,
             }}>
                 {item.title}
             </Text>

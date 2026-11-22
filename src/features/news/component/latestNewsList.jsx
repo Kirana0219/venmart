@@ -14,7 +14,6 @@ const LatestNewsList = ({item, onPress}) => {
                 data={latestNews}
                 keyExtractor={item => item.id.toString()}
                 showsVerticalScrollIndicator={false}
-
                 renderItem={({item}) => (
                     <LatestNewsCard 
                         item={item}
