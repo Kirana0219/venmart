@@ -6,13 +6,14 @@ import {
   Poppins_600SemiBold,
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
-import * as SplashScreen from 'expo-splash-screen';
-import {useEffect} from 'react';
+import * as SplashScreen from "expo-splash-screen";
+import { useEffect } from "react";
 
-// Perintah untuk menyembunyikan SplashScreen
+// Perintah untuk mencegah SplashScreen tersembunyi secara otomatis
 SplashScreen.preventAutoHideAsync();
 
 const Layout = () => {
+  // Memuat custom font
   const [loaded, error] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
@@ -29,7 +30,7 @@ const Layout = () => {
   if (!loaded && !error) {
     return null;
   }
-  
+
   return (
     <Stack
       screenOptions={{
@@ -40,8 +41,11 @@ const Layout = () => {
         headerShadowVisible: false,
       }}
     >
-      <Stack.Screen name="news/[id]" options={{ headerShown: true, headerTitle: "Detail News" }} />
-      <Stack.Screen name="(tabs)" options={{ headerShown: false}} />
+      <Stack.Screen
+        name="news/[id]"
+        options={{ headerShown: true, headerTitle: "Detail News" }}
+      />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
   );
 };

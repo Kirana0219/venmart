@@ -1,5 +1,3 @@
-
-
 const fontFamily = {
   thin: "Poppins_100Thin",
   regular: "Poppins_400Regular",
@@ -17,26 +15,49 @@ const colors = {
   primary20: "#E2D4F7",
 
   // Neutral
-  neutral100: "#131218",
-  neutral90: "#1D1C25",
-  neutral80: "#272631",
-  neutral70: "#343341",
-  neutral60: "#3E3D4D",
-  neutral50: "#53526A",
-  neutral40: "#757494",
-  neutral30: "#9C9AC1",
-  neutral20: "#CBC9EF",
-  neutral10: "#E8E7FF",
+  neutral100: "#1E1E1E",
+  neutral90: "#333333",
+  neutral80: "#474747",
+  neutral70: "#5C5C5C",
+  neutral60: "#707070",
+  neutral50: "#858585",
+  neutral40: "#999999",
+  neutral30: "#B8B8B8",
+  neutral20: "#D6D6DC",
+  neutral10: "#F8F8FC",
 
   // Black & White
   white: "#fff",
   black: "#222",
 
   // Utilites
-  danger: "#E7002A",
-  positive: "#3EC55F",
-  warning: "#FECB2F",
-  info: "#157EFB",
+  // Danger
+  danger100: "#EC221F",
+  danger80: "#F04E4C",
+  danger60: "#F47A79",
+  danger40: "#F7A7A5",
+  danger20: "#FBD3D2",
+
+  // Positive
+  positive100: "#14AE5C",
+  positive80: "#43BE7D",
+  positive60: "#72CE9D",
+  positive40: "#A1DFBE",
+  positive20: "#D0EFDE",
+
+  // Warning
+  warning100: "#E5A000",
+  warning80: "#EAB333",
+  warning60: "#EFC666",
+  warning40: "#F5D999",
+  warning20: "#FAECCC",
+
+  // Info
+  info100: "#157EFB",
+  info80: "#4396FC",
+  info60: "#71AEFC",
+  info40: "#9FC6FD",
+  info20: "#CFE3FE",
 };
 
 const theme = {
