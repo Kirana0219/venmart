@@ -1,7 +1,10 @@
 import React from "react";
+import ActivityScreen from "../../features/activity/screen/activity";
 
-const Activity = () => {
-
+const ActivityTab = () => {
+    return(
+        <ActivityScreen/>
+    );
 }
 
-export default Activity;
+export default ActivityTab;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import CategoryList from "../component/categoryList";
 import Lucide from "@react-native-vector-icons/lucide";
@@ -12,56 +12,54 @@ const NewsScreen = () => {
     const router = useRouter();
     const handleNews = (item) => router.push(`/news/${item.id}`);
 
-   return(
-    <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.continer}>
-            <View style={styles.searchContainer}>
-                <Lucide name="search" style={styles.searchIcon}/>
-                <TextInput 
-                    placeholder="search news by title or topic..." 
-                    style={styles.searchInput}
-                />
-            </View>
+    return(
+        <ScrollView showsVerticalScrollIndicator={false}>
+            <View style={styles.continer}>
+                <View style={styles.searchContainer}>
+                    <Lucide name="search" style={styles.searchIcon}/>
+                    <TextInput 
+                        placeholder="search news by title or topic..." 
+                        style={styles.searchInput}
+                    />
+                </View>
 
-            <CategoryList/>
-            
-            <View style={styles.futuredNewsContainer}>
-                <Text style={styles.futuredNewsText}>Futured News</Text>
-                <FuturedNewsList
-                    onPress={handleNews}
-                />
-            </View>
+                <CategoryList/>
+                
+                <View style={styles.futuredNewsContainer}>
+                    <Text style={styles.futuredNewsText}>Futured News</Text>
+                    <FuturedNewsList
+                        onPress={handleNews}
+                    />
+                </View>
 
-            <View style={styles.latestNewsContainer}>
-                <Text style={styles.latestNewsText}>Latest News</Text>
-                <LatestNewsList
-                    onPress={handleNews}
-                />
+                <View style={styles.latestNewsContainer}>
+                    <Text style={styles.latestNewsText}>Latest News</Text>
+                    <LatestNewsList
+                        onPress={handleNews}
+                    />
+                </View>
             </View>
-
-        </View>
-    </ScrollView>
-   );
+        </ScrollView>
+    );
 }
 
 const styles = StyleSheet.create({
     continer: {
         flex: 1,
         paddingTop: 16,
-        paddingHorizontal: 18,
+        paddingHorizontal: 20,
         gap: 12,
         backgroundColor: theme.colors.white
     },
     searchContainer: {
-        flexDirection: "row",
-        alignItems: "center",
-        gap: 4,
         backgroundColor: theme.colors.white,
-        paddingHorizontal: 20,
-        paddingVertical: 4,
-        borderRadius: 50,
+        flex: 1,
+        flexDirection: "row",
+        alignItems: 'center',
         borderWidth: 1,
-        borderColor: theme.colors.primary20
+        borderColor: theme.colors.primary80,
+        borderRadius: 50,
+        paddingHorizontal: 12
     },
     searchInput: {
         fontFamily: theme.fontFamily.regular,
@@ -69,7 +67,7 @@ const styles = StyleSheet.create({
         fontWeight: "400",
     },
     searchIcon: {
-        fontSize: 18,
+        fontSize: 16,
         color: theme.colors.primary80,
         fontWeight: "600",
     },
