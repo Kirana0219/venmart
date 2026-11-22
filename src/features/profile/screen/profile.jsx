@@ -82,7 +82,7 @@ const ProfileScreen = () => {
         {/* End of Account & Activity Section */}
 
         <CustomButton
-          title="Edit Profile"
+          title="Log Out"
           icon="log-out"
           backgroundColor={theme.colors.danger20}
           color={theme.colors.danger100}
