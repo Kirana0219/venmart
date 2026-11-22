@@ -1,15 +1,15 @@
 import React from "react";
-import { Pressable, StyleSheet, ScrollView, Text, View } from "react-native";
+import { StyleSheet, ScrollView, Text, View } from "react-native";
 import theme from "../../../theme/theme";
 import { Image } from "react-native";
 import CustomButton from "../../../components/customButton";
-import Lucide from "@react-native-vector-icons/lucide";
+import CustomOptions from "../components/options";
 import { useRouter } from "expo-router";
 
 const ProfileScreen = () => {
   const router = useRouter();
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         {/* Start of Profile Card */}
         <View style={styles.profileCard}>
@@ -39,21 +39,13 @@ const ProfileScreen = () => {
         <View style={styles.optionsContainer}>
           <Text style={styles.heading}>Acount & Activity</Text>
           <View style={styles.optionsCard}>
-            <Pressable style={styles.options}>
-              <Lucide name="heart" style={styles.optionsIcon}></Lucide>
-              <Text style={styles.text}>My Favorites</Text>
-              <Lucide name="arrow-right" style={styles.arrowIcon}></Lucide>
-            </Pressable>
-            <Pressable style={styles.options}>
-              <Lucide name="history" style={styles.optionsIcon}></Lucide>
-              <Text style={styles.text}>Transaction History</Text>
-              <Lucide name="arrow-right" style={styles.arrowIcon}></Lucide>
-            </Pressable>
-            <Pressable style={[styles.options, { borderBottomWidth: 0 }]}>
-              <Lucide name="bell" style={styles.optionsIcon}></Lucide>
-              <Text style={styles.text}>Notification Settings</Text>
-              <Lucide name="arrow-right" style={styles.arrowIcon}></Lucide>
-            </Pressable>
+            <CustomOptions title="My Favorites" icon="heart" />
+            <CustomOptions title="Transaction History" icon="history" />
+            <CustomOptions
+              title="Notification Settings"
+              icon="bell"
+              borderBottomWidth={0}
+            />
           </View>
         </View>
         {/* End of Account & Activity Section */}
@@ -62,21 +54,13 @@ const ProfileScreen = () => {
         <View style={styles.optionsContainer}>
           <Text style={styles.heading}>Support & Policy</Text>
           <View style={styles.optionsCard}>
-            <Pressable style={styles.options}>
-              <Lucide name="help-circle" style={styles.optionsIcon}></Lucide>
-              <Text style={styles.text}>Help Center</Text>
-              <Lucide name="arrow-right" style={styles.arrowIcon}></Lucide>
-            </Pressable>
-            <Pressable style={styles.options}>
-              <Lucide name="file-text" style={styles.optionsIcon}></Lucide>
-              <Text style={styles.text}>Terms & Conditions</Text>
-              <Lucide name="arrow-right" style={styles.arrowIcon}></Lucide>
-            </Pressable>
-            <Pressable style={[styles.options, { borderBottomWidth: 0 }]}>
-              <Lucide name="shield-alert" style={styles.optionsIcon}></Lucide>
-              <Text style={styles.text}>Privacy Policy</Text>
-              <Lucide name="arrow-right" style={styles.arrowIcon}></Lucide>
-            </Pressable>
+            <CustomOptions title="Help Center" icon="help-circle" />
+            <CustomOptions title="Terms & Conditions" icon="file-text" />
+            <CustomOptions
+              title="Privacy Policy"
+              icon="shield-alert"
+              borderBottomWidth={0}
+            />
           </View>
         </View>
         {/* End of Account & Activity Section */}
@@ -137,29 +121,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: theme.radius.xl,
     borderColor: theme.colors.neutral20,
-  },
-  options: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: theme.spacing.xs,
-    padding: theme.spacing.lg,
-    borderBottomWidth: 1,
-    borderColor: theme.colors.neutral20,
-  },
-  optionsIcon: {
-    color: theme.colors.primary100,
-    fontSize: theme.fontSizes.body,
-  },
-  text: {
-    fontFamily: theme.fontFamily.regular,
-    fontSize: theme.fontSizes.sm,
-    color: theme.colors.neutral80,
-    lineHeight: theme.fontSizes.lg,
-  },
-  arrowIcon: {
-    marginLeft: "auto",
-    color: theme.colors.neutral40,
-    fontSize: theme.fontSizes.body,
   },
 });
 
