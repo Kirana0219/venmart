@@ -1,34 +1,8 @@
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { Text, View, StyleSheet } from "react-native";
-import { Stack } from "expo-router";
-import theme from "../../theme/theme";
-import CustomButton from "../../components/customButton";
+import HomeScreen from "../../features/home/screen/home";
 
 const Home = () => {
-  return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Stack.Screen options={{ headerShown: false }} />
-      <View style={styles.container}>
-        <Text style={styles.title}>Ini halaman Home</Text>
-        <CustomButton title="Login"/>
-      </View>
-    </SafeAreaView>
-  );
+  return <HomeScreen />;
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItem: "center",
-    margin: theme.spacing.xxl,
-  },
-  title: {
-    fontFamily: theme.fontFamily.bold,
-    fontSize: theme.fontSizes.xxl,
-    color: theme.colors.primary100,
-  }
-});
 
 export default Home;
