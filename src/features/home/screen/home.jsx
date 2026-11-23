@@ -1,11 +1,17 @@
 import React from "react";
-import { ScrollView, StyleSheet, TextInput, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import theme from "../../../theme/theme";
-import Lucide from "@react-native-vector-icons/lucide";
+import { useRouter } from "expo-router";
 import CategoryList from "../../news/component/categoryList";
 import CustomSearchBar from "../../../shared/components/customSearchBar";
+import FeaturedEventList from "../../event/components/featuredEventList";
+import PopularEventList from "../../event/components/popularEventList";
+import UpcomingEventList from "../../event/components/upcomingEventCard";
+import LatestNewsList from "../../news/component/latestNewsList";
 
-const Home = () => {
+const HomeScreen = () => {
+  const router = useRouter();
+  const handleNews = (item) => router.push(`/news/${item.id}`);
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
@@ -17,6 +23,28 @@ const Home = () => {
         {/* End of search bar */}
 
         <CategoryList />
+
+        {/* Featured Event */}
+        <View style={styles.eventContainer}>
+          <Text style={styles.heading}>Recomendation for you</Text>
+          <FeaturedEventList />
+        </View>
+        {/* Popular Event */}
+        <View style={styles.eventContainer}>
+          <Text style={styles.heading}>Popular Event</Text>
+          <PopularEventList />
+        </View>
+        {/* Upcoming Event */}
+        <View style={styles.eventContainer}>
+          <Text style={styles.heading}>Upcoming Event</Text>
+          <UpcomingEventList limit={2}/>
+        </View>
+
+        {/* Latest News */}
+        <View style={styles.eventContainer}>
+          <Text style={styles.heading}>Latest News</Text>
+          <LatestNewsList onPress={handleNews} />
+        </View>
       </View>
     </ScrollView>
   );
@@ -41,21 +69,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: theme.colors.primary20,
   },
-  searchInput: {
-    fontFamily: theme.fontFamily.regular,
-    fontSize: 16,
-    fontWeight: "400",
+  eventContainer: {
+    gap: 4,
   },
-  searchIcon: {
-    fontSize: theme.fontSizes.body,
-    color: theme.colors.primary80,
-    fontWeight: "600",
-  },
-  filterIcon: {
-    marginLeft: "auto",
-    color: theme.colors.primary100,
-    fontSize: theme.fontSizes.body,
+  heading: {
+    fontFamily: theme.fontFamily.semibold,
+    fontSize: theme.fontSizes.md,
+    lineHeight: theme.fontSizes.xxl,
+    color: theme.colors.neutral100,
   },
 });
 
-export default Home;
+export default HomeScreen;

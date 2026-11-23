@@ -1,6 +1,6 @@
 import React from "react";
 import news from "../data/dataNews";
-import { FlatList, View } from "react-native";
+import { View } from "react-native";
 import LatestNewsCard from "./latestNewsCard";
 
 const LatestNewsList = ({ onPress }) => {

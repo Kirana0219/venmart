@@ -10,7 +10,7 @@ const CustomOptions = ({ title, onPress, icon, borderBottomWidth = 1 }) => {
     >
       {icon && <Lucide name={icon} style={styles.optionsIcon} />}
       <Text style={styles.text}>{title}</Text>
-      <Lucide name="arrow-right" style={styles.arrowIcon}></Lucide>
+      <Lucide name="chevron-right" style={styles.arrowIcon}></Lucide>
     </Pressable>
   );
 };
