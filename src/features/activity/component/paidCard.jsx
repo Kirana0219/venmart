@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         marginTop: 12,
         borderWidth: 0.5,
         borderColor: theme.colors.primary80,
-        gap: 10
+        gap: 10,
     },
     image: {
         width: 70,
@@ -100,7 +100,9 @@ const styles = StyleSheet.create({
     },
     ticketContainer: {
         padding: 6,
-        backgroundColor: theme.colors.primary20,
+        backgroundColor: theme.colors.white,
+        borderWidth: 0.5,
+        borderColor: theme.colors.primary80,
         borderRadius: 6,
         flexDirection: "row",
         justifyContent: "space-between",

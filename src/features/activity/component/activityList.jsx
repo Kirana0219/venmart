@@ -33,11 +33,11 @@ const ActivityList = ({ selectedStatus = "Paid" }) => {
     };
 
     return (
-        <View>
+        <View style={{paddingBottom: 50}}>
             {filteredActivity.map(item => (
                 <View key={item.id}>
                     {renderActivityCard(item)}
-                </View>
+                </View>   
             ))}
         </View>
     );

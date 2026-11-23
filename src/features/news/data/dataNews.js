@@ -72,7 +72,7 @@ const news = [
         title: "Student Research and Innovation Exhibition",
         content: "Student research plays an important role in developing critical thinking, creativity, and problem-solving abilities. Through research activities, students can explore real-world problems and develop solutions based on observation, experimentation, and analysis. This exhibition showcases a variety of student projects across different fields, including technology, science, business, and creative industries. Visitors can explore project demonstrations, discuss research findings, and discover how students transform ideas into practical innovations. The event also creates opportunities for collaboration between students, educators, and industry representatives. By sharing their work with a wider audience, young innovators can receive feedback, build connections, and gain motivation to continue developing their ideas.",
         subContent: "The exhibition showcases student research and encourages practical innovation through creative projects.",
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=900&auto=format&fit=crop&q=80",
+        image: "https://plus.unsplash.com/premium_photo-1758653024553-e84f288bbb90?q=80&w=1267&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
         authorName: "James Wilson",
         authorImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80",
         readTime: "7 min read",
