@@ -18,6 +18,7 @@ const TabsLayout = () => {
                     {
                         title: 'News',
                         tabBarIcon: ({color}) => <Lucide name="newspaper" size={24} color={color}/>
+                    
                     }
                 }/>
             <Tabs.Screen
