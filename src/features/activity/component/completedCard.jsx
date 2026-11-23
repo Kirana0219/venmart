@@ -2,6 +2,7 @@ import React, { startTransition } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import theme from "../../../theme/theme";
 import Lucide from "@react-native-vector-icons/lucide";
+import { router } from "expo-router";
 
 const CompletedCard = ({ item, onPress }) => {
     return (
@@ -46,13 +47,17 @@ const CompletedCard = ({ item, onPress }) => {
 
             <View style={styles.subContentInfo}>
                 <Text style={styles.paymentMethod}>{item.paymentMethod}</Text>
-                <TouchableOpacity style={styles.exploreButton}>
+                <TouchableOpacity 
+                    style={styles.exploreButton}
+                    onPress={() => router.navigate("./home")}
+                >
                     <Lucide 
                         name="scan-search" 
                         size={20}
                         color={theme.colors.primary100}
                     />
                     <Text style={styles.exploreTextButton}>Explore Event</Text>
+
                 </TouchableOpacity>
             </View>
         </TouchableOpacity>
