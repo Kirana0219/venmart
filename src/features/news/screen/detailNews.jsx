@@ -13,7 +13,7 @@ const DetailNews = () => {
 
     if (!item) {
         return (
-            <View style={styles.container}>
+            <View>
                 <Text>News Not Found!</Text>
             </View>
         );

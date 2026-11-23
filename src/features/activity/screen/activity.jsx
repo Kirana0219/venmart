@@ -1,37 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import theme from "../../../theme/theme";
 import { ScrollView, StyleSheet, TextInput, View } from "react-native";
 import Lucide from "@react-native-vector-icons/lucide";
-import ActivityCaregoryList from "../component/activityList";
+import ActivityCaregoryList from "../component/activityCategoryList";
+import CustomSearchBar from "../../../shared/components/customSearchBar";
+import ActivityList from "../component/activityList";
 
 const ActivityScreen = () => {
+
+    const [selectedStatus, setSelectedStatus] = useState("Paid")
     return(
         <ScrollView
             showsHorizontalScrollIndicator={false}
             style={styles.container}
         >
-            <View style={styles.searchContainer}>
-                <View style={{flexDirection: "row", alignItems: "center"}}> 
-                    <Lucide 
-                        name="search" 
-                        size={16} 
-                        style={{color: theme.colors.primary100}}
-                    />
-                    <TextInput
-                        placeholder="Search event or Order ID"
-                        style={styles.searchText}
-                    />
-                </View>
-                <View style={{justifyContent: "flex-end"}}>
-                    <Lucide 
-                        name="filter" 
-                        size={16}
-                        style={{color: theme.colors.primary100}}
-                    />
-                </View>
+            <View>
+                <CustomSearchBar      
+                    title={"Search event by title or order ID..."}                
+                    icon="list-filter" 
+                />
             </View>
-
-            <ActivityCaregoryList/>
+            <ActivityCaregoryList
+                selectedStatus={selectedStatus}
+                onSelect={setSelectedStatus}
+            />
+            <ActivityList selectedStatus={selectedStatus}/>
         </ScrollView>
     );
 }

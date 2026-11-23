@@ -1,17 +1,15 @@
-
 export const ActivityCategory = [
-    { id: 1, label: "All", status: "all" },
-    { id: 2, label: "Paid", status: "paid" },
-    { id: 3, label: "Pending", status: "pending" },
-    { id: 4, label: "Refunded", status: "refunded" },
-    { id: 5, label: "Completed", status: "completed" },
+    { id: 1, label: "Paid", status: "Paid" },
+    { id: 2, label: "Pending", status: "Pending" },
+    { id: 3, label: "Refunded", status: "Refunded" },
+    { id: 4, label: "Completed", status: "Completed" },
 ];
 
 const ActivityData = [
 
     {
         id: 1,
-        status: "paid",
+        status: "Paid",
         eventName: "Neon Echoes Live 2026",
         image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&auto=format&fit=crop&q=80",
         eventDate: "Sat, Dec 14",
@@ -24,7 +22,7 @@ const ActivityData = [
     },
     {
         id: 2,
-        status: "paid",
+        status: "Paid",
         eventName: "UI/UX Portfolio Review Live",
         image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300&auto=format&fit=crop&q=80",
         eventDate: "Sun, Dec 15",
@@ -37,7 +35,7 @@ const ActivityData = [
     },
     {
         id: 3,
-        status: "paid",
+        status: "Paid",
         eventName: "Bali Music & Art Festival",
         image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&auto=format&fit=crop&q=80",
         eventDate: "Sat, Dec 27",
@@ -51,7 +49,7 @@ const ActivityData = [
 
     {
         id: 4,
-        status: "pending",
+        status: "Pending",
         eventName: "Twilight Sound Fest",
         image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&auto=format&fit=crop&q=80",
         eventDate: "Sat, Dec 21",
@@ -64,7 +62,7 @@ const ActivityData = [
     },
     {
         id: 5,
-        status: "pending",
+        status: "Pending",
         eventName: "Design Systems Summit",
         image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&auto=format&fit=crop&q=80",
         eventDate: "Sun, Dec 22",
@@ -77,7 +75,7 @@ const ActivityData = [
     },
     {
         id: 6,
-        status: "pending",
+        status: "Pending",
         eventName: "Creative Business Workshop",
         image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=300&auto=format&fit=crop&q=80",
         eventDate: "Mon, Dec 23",
@@ -91,7 +89,7 @@ const ActivityData = [
 
     {
         id: 7,
-        status: "refunded",
+        status: "Refunded",
         eventName: "Twilight 5K Charity Run",
         image: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=300&auto=format&fit=crop&q=80",
         eventDate: "Wed, Oct 30",
@@ -106,7 +104,7 @@ const ActivityData = [
     },
     {
         id: 8,
-        status: "refunded",
+        status: "Refunded",
         eventName: "Lumen Art Exhibition",
         image: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=300&auto=format&fit=crop&q=80",
         eventDate: "Fri, Nov 07",
@@ -121,7 +119,7 @@ const ActivityData = [
     },
     {
         id: 9,
-        status: "refunded",
+        status: "Refunded",
         eventName: "Digital Creator Webinar",
         image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=300&auto=format&fit=crop&q=80",
         eventDate: "Tue, Nov 11",
@@ -137,7 +135,7 @@ const ActivityData = [
 
     {
         id: 10,
-        status: "completed",
+        status: "Completed",
         eventName: "Lumen Light Preview",
         image: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=300&auto=format&fit=crop&q=80",
         eventDate: "Mon, Nov 18",
@@ -151,7 +149,7 @@ const ActivityData = [
     },
     {
         id: 11,
-        status: "completed",
+        status: "Completed",
         eventName: "Ceramic Wheel Studio",
         image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=300&auto=format&fit=crop&q=80",
         eventDate: "Sat, Nov 02",
@@ -165,7 +163,7 @@ const ActivityData = [
     },
     {
         id: 12,
-        status: "completed",
+        status: "Completed",
         eventName: "Indonesia Tech Community Meetup",
         image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300&auto=format&fit=crop&q=80",
         eventDate: "Sun, Nov 09",
@@ -180,7 +178,7 @@ const ActivityData = [
 
     {
         id: 13,
-        status: "paid",
+        status: "Paid",
         eventName: "Bali Design Week 2026",
         image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=300&auto=format&fit=crop&q=80",
         eventDate: "Sat, Dec 28",
@@ -193,7 +191,7 @@ const ActivityData = [
     },
     {
         id: 14,
-        status: "pending",
+        status: "Pending",
         eventName: "Future of Technology Summit",
         image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=300&auto=format&fit=crop&q=80",
         eventDate: "Sun, Dec 29",
@@ -206,7 +204,7 @@ const ActivityData = [
     },
     {
         id: 15,
-        status: "refunded",
+        status: "Refunded",
         eventName: "Creative Photography Class",
         image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=300&auto=format&fit=crop&q=80",
         eventDate: "Fri, Nov 14",

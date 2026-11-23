@@ -1,28 +1,46 @@
-import React, { useState } from "react";
-import { ActivityCategory } from "../data/activityData";
-import { FlatList, View } from "react-native";
-import ActivityCategoryCard from "./activityCategoryCard";
+import React from "react";
+import { View } from "react-native";
 
-const ActivityCaregoryList = () => {
-    const  [SelectedCategory, setSelectedCategory] = useState(1)
+import ActivityData from "../data/activityData";
+import PaidCard from "./paidCard";
+import PendingCard from "./pendingCard";
+import RefundedCard from "./refundedCard";
+import CompletedCard from "./completedCard";
 
-    return(
+const ActivityList = ({ selectedStatus = "Paid" }) => {
+
+    const filteredActivity = ActivityData.filter(
+        item => item.status === selectedStatus
+    );
+
+    const renderActivityCard = (item) => {
+        switch (item.status) {
+            case "Paid":
+                return <PaidCard item={item} />;
+
+            case "Pending":
+                return <PendingCard item={item} />;
+
+            case "Refunded":
+                return <RefundedCard item={item} />;
+
+            case "Completed":
+                return <CompletedCard item={item} />;
+
+            default:
+                return null;
+        }
+    };
+
+    return (
         <View>
-            <FlatList
-                horizontal
-                data={ActivityCategory}
-                keyExtractor={item => item.id.toString()}
-                showsHorizontalScrollIndicator={false}
-                renderItem={({item}) => (
-                    <ActivityCategoryCard
-                        item={item}
-                        isSelectedCategory={SelectedCategory === item.id}
-                        onPress={() => setSelectedCategory(item.id)}
-                    />
-                )}
-            />
+            {filteredActivity.map(item => (
+                <View key={item.id}>
+                    {renderActivityCard(item)}
+                </View>
+            ))}
         </View>
     );
-}
+};
 
-export default ActivityCaregoryList;
+export default ActivityList;
