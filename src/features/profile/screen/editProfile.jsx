@@ -10,7 +10,7 @@ import {
 import { Stack } from "expo-router";
 import theme from "../../../theme/theme";
 import CustomInputs from "../components/inputs";
-import CustomButton from "../../../components/customButton";
+import CustomButton from "../../../shared/components/customButton";
 import Lucide from "@react-native-vector-icons/lucide";
 
 const EditProfile = () => {

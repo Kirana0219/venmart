@@ -1,26 +1,22 @@
 import React from "react";
-import { ScrollView,  StyleSheet, TextInput, View} from "react-native";
+import { ScrollView, StyleSheet, TextInput, View } from "react-native";
 import theme from "../../../theme/theme";
 import Lucide from "@react-native-vector-icons/lucide";
 import CategoryList from "../../news/component/categoryList";
+import CustomSearchBar from "../../../shared/components/customSearchBar";
 
 const Home = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
         {/* Start of search bar */}
-        <View style={styles.searchContainer}>
-          <Lucide name="search" style={styles.searchIcon} />
-          <TextInput
-            placeholder="search events, artist, or locati..."
-            style={styles.searchInput}
-          />
-          <Lucide name="list-filter" style={styles.filterIcon} />
-        </View>
+        <CustomSearchBar
+          title="Search events, artist, or locations..."
+          icon="list-filter"
+        />
         {/* End of search bar */}
 
         <CategoryList />
-
       </View>
     </ScrollView>
   );

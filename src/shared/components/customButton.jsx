@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Text } from "react-native";
-import theme from "../theme/theme";
+import theme from "../../theme/theme";
 import { Lucide } from "@react-native-vector-icons/lucide";
 
 const CustomButton = ({
@@ -8,15 +8,18 @@ const CustomButton = ({
   icon,
   backgroundColor = theme.colors.primary100,
   color = theme.colors.white,
-  style
+  style,
 }) => {
   return (
-    <Pressable style={[styles.button, { backgroundColor }, style]} onPress={onPress}>
+    <Pressable
+      style={[styles.button, { backgroundColor }, style]}
+      onPress={onPress}
+    >
       {icon && <Lucide name={icon} style={[styles.icon, { color }]} />}
       <Text style={[styles.buttonText, { color }]}>{title}</Text>
     </Pressable>
   );
-}
+};
 
 const styles = StyleSheet.create({
   button: {
