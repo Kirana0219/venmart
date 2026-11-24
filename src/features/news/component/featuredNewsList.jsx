@@ -2,10 +2,10 @@ import React from "react";
 import { FlatList, View } from "react-native";
 
 import news from "../data/dataNews";
-import FuturedNewsCard from "./futuredNewsCard";
+import FuturedNewsCard from "./featuredNewsCard";
 import categories from "../data/category";
 
-const FuturedNewsList = ({item, onPress, category}) => {
+const FeaturedNewsList = ({item, onPress, category}) => {
 
     const featuredNews = news
     .filter(item =>[22,17,15,20,7].includes(item.id));
@@ -31,4 +31,4 @@ const FuturedNewsList = ({item, onPress, category}) => {
     );
 };
 
-export default FuturedNewsList;
+export default FeaturedNewsList;

@@ -98,7 +98,7 @@ Pastikan perangkat telah memiliki:
 - Node.js
 - npm
 - Git
-- Visual Studio Code (disarankan)
+- Visual Studio Code 
 - Expo Go atau Android Emulator
 
 ### Langkah Instalasi

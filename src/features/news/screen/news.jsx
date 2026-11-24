@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CategoryList from "../component/categoryList";
 import theme from "../../../theme/theme";
-import FuturedNewsList from "../component/futuredNewsList";
+import FeaturedNewsList from "../component/featuredNewsList";
 import LatestNewsList from "../component/latestNewsList";
 import { useRouter } from "expo-router";
 import CustomSearchBar from "../../../shared/components/customSearchBar";
@@ -21,9 +21,9 @@ const NewsScreen = () => {
                 />
                 <CategoryList/>
                 
-                <View style={styles.futuredNewsContainer}>
-                    <Text style={styles.futuredNewsText}>Futured News</Text>
-                    <FuturedNewsList
+                <View style={styles.featuredNewsContainer}>
+                    <Text style={styles.featuredNewsText}>Featured News</Text>
+                    <FeaturedNewsList
                         onPress={handleNews}
                     />
                 </View>
@@ -47,10 +47,10 @@ const styles = StyleSheet.create({
         gap: 12,
         backgroundColor: theme.colors.white
     },
-    futuredNewsContainer: {
+    featuredNewsContainer: {
         marginTop: 8,
     },
-    futuredNewsText: {
+    featuredNewsText: {
         fontSize: theme.fontSizes.md,
         fontFamily: theme.fontFamily.semibold
     },
