@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     color: theme.colors.neutral40,
   },
   price: {
-    fontFamily: theme.fontFamily.semibold,
+    fontFamily: theme.fontFamily.bold,
     fontSize: theme.fontSizes.body,
     color: theme.colors.primary100,
   },
