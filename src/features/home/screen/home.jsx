@@ -2,12 +2,12 @@ import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import theme from "../../../theme/theme";
-import { useRouter, Stack } from "expo-router";
+import { useRouter } from "expo-router";
 import CategoryList from "../../news/component/categoryList";
 import CustomSearchBar from "../../../shared/components/customSearchBar";
 import FeaturedEventList from "../../event/components/featuredEventList";
 import PopularEventList from "../../event/components/popularEventList";
-import UpcomingEventList from "../../event/components/upcomingEventCard";
+import UpcomingEventList from "../../event/components/upcomingEventList";
 import LatestNewsList from "../../news/component/latestNewsList";
 import HomeHeader from "../components/HomeHeader";
 

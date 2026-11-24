@@ -14,6 +14,7 @@ const event = [
       "Experience an immersive night of indie electronic music, synchronized light installations, and live visual art featuring regional headliners and guest DJs.",
     image:
       "https://images.unsplash.com/photo-1768053917161-34fc3365c9b2?auto=format&fit=crop&w=1200&q=80",
+    organizerImage: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
     ticketOptions: [
       {
         id: 1,
@@ -47,6 +48,7 @@ const event = [
       "A creative conference exploring the future of design, technology, and digital experiences with industry professionals.",
     image:
       "https://images.unsplash.com/photo-1773828755374-0ee802d9f44b?auto=format&fit=crop&w=1200&q=80",
+    organizerImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5XQTWeHmdIb5QWF4XwgCvKJXeMIWgLKgTpEnFWaTZtxhPsCtjz-zSeMN-&s=10",
     ticketOptions: [
       {
         id: 1,
@@ -80,6 +82,7 @@ const event = [
       "Discover the art of pottery through a hands-on ceramic wheel workshop guided by experienced ceramic artists.",
     image:
       "https://images.unsplash.com/photo-1771523350488-32af5ba560e6?auto=format&fit=crop&w=1200&q=80",
+    organizerImage: "https://mir-s3-cdn-cf.behance.net/projects/404/2c9b02180321151.Y3JvcCw4MDcsNjMxLDMwMywxMzM.jpg",
     ticketOptions: [
       {
         id: 1,
@@ -113,6 +116,7 @@ const event = [
       "Start your morning with an energetic city running experience. Join hundreds of runners and enjoy a 10K route through Jakarta.",
     image:
       "https://images.unsplash.com/photo-1771859759696-ad840ed0707b?auto=format&fit=crop&w=1200&q=80",
+    organizerImage: "https://cdn.britannica.com/50/213250-050-02322AA8/Nike-logo.jpg",
     ticketOptions: [
       {
         id: 1,
@@ -146,6 +150,7 @@ const event = [
       "Enjoy an outdoor music festival featuring live performances, local food vendors, creative communities, and a vibrant evening atmosphere.",
     image:
       "https://images.unsplash.com/photo-1757281504806-f146e59bdd29?auto=format&fit=crop&w=1200&q=80",
+    organizerImage: "https://mir-s3-cdn-cf.behance.net/projects/404/374343214489639.Y3JvcCwxMDg2LDg1MCwxNzcsMA.png",
     ticketOptions: [
       {
         id: 1,
@@ -179,6 +184,7 @@ const event = [
       "Explore an immersive light art exhibition featuring interactive installations and contemporary visual experiences.",
     image:
       "https://images.unsplash.com/photo-1614189449397-bad2fc66459e?auto=format&fit=crop&w=1200&q=80",
+    organizerImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSpa_zb9zLLOBOMOhr3fzEGtKjUwoafgw8AaKVt4jAGJ12fRL9KFFtvgU&s=10",
     ticketOptions: [
       {
         id: 1,
@@ -210,7 +216,8 @@ const event = [
     organizerPhone: "+62 817-9012-3456",
     description:
       "Spend a relaxing evening with acoustic performances from emerging musicians in an intimate outdoor setting.",
-    image: "https://images.unsplash.com/photo-1577042816206-2e85c23f2392?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    image: "https://plus.unsplash.com/premium_photo-1682294456305-a25f92fbf016?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    organizerImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwaaZWnv3gZ_9KL_8_TUWbOfsQ8r-YsAXTebD7GYISOw&s=10",
     ticketOptions: [
       {
         id: 1,
@@ -243,6 +250,7 @@ const event = [
     description:
       "Learn photography fundamentals, composition techniques, and creative storytelling through practical exercises.",
     image: "https://images.unsplash.com/photo-1517319084147-208a3caceb22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    organizerImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6r_I95_64jMgImlA4w-9q48MdTZZUVMp6iLVH37rHwA&s=10",
     ticketOptions: [
       {
         id: 1,
@@ -275,6 +283,7 @@ const event = [
     description:
       "Gain insights into digital transformation, business innovation, and emerging technologies from experienced professionals.",
     image: "https://images.unsplash.com/photo-1790725673673-547b23f1ee61?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    organizerImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9KDr1pCCmkjgZuJTTh14hCuyuk7knZlDUk3x2tG3eXA&s=10",
     ticketOptions: [
       {
         id: 1,
@@ -307,6 +316,7 @@ const event = [
     description:
       "Discover local creative products, handmade crafts, independent brands, food stalls, and community activities in one creative market.",
     image: "https://images.unsplash.com/photo-1779135374297-bcb2dde5ad6d?q=80&w=1192&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    organizerImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ31RmLJrJ-J7HO5OInnxi_pERJtSb5o6jQpYDrjg-tjw&s=10",
     ticketOptions: [
       {
         id: 1,
