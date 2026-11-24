@@ -7,9 +7,8 @@
 |---|---|
 | Nama Aplikasi | VENMART |
 | Platform | Android |
-| Framework | React Native |
+| Framework | React Native Expo|
 | Bahasa Pemrograman | JavaScript |
-| Development Platform |Expo |
 | Repository | [GitHub - VENMART](https://github.com/Kirana0219/venmart) |
 
 ## 2. Latar Belakang Aplikasi
