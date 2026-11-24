@@ -25,9 +25,7 @@ Pengembangan aplikasi VENMART memiliki beberapa tujuan, yaitu:
 1. Mempermudah masyarakat dalam menemukan dan memperoleh informasi mengenai berbagai event melalui satu platform.
 2. Membantu pengguna menemukan kegiatan yang sesuai dengan minat dan kebutuhan berdasarkan informasi event yang tersedia.
 3. Memberikan akses informasi mengenai event online maupun offline agar pengguna dari berbagai wilayah tetap dapat menemukan kegiatan yang dapat diikuti.
-4. Menyediakan informasi dan berita yang berkaitan dengan kegiatan atau event.
-5. Memudahkan pengguna dalam melihat riwayat aktivitas dan memantau status transaksi.
-6. Menghadirkan aplikasi dengan antarmuka yang mudah dipahami dan digunakan.
+4. Menyediakan informasi dan berita terkait kegiatan atau event sebagai untuk membantu pengguna dalam memperoleh informasi terkait event, serta sebagai media promosi bagi penyelenggara event untuk memperkenalkan, mempublikasikan, dan meningkatkan jangkauan informasi event kepada calon pengunjung maupun tenant.
 
 ## 4. Target Pengguna
 
@@ -37,10 +35,10 @@ VENMART ditujukan kepada masyarakat yang memiliki ketertarikan untuk mencari inf
 
 | Aspek | Karakteristik |
 |---|---|
-| Demografis | Laki-laki dan perempuan, khususnya usia 17–40 tahun, seperti pelajar, mahasiswa, pekerja, dan masyarakat umum. |
-| Geografis | Masyarakat dari seluruh wilayah Indonesia, baik perkotaan maupun pedesaan, termasuk pengguna yang tinggal di pulau berbeda dari lokasi penyelenggaraan event. |
-| Psikografis | Pengguna yang memiliki minat terhadap hiburan, pendidikan, pengembangan diri, bisnis, seni, budaya, olahraga, dan kegiatan komunitas. |
-| Perilaku | Pengguna aktif smartphone dan internet, terbiasa mencari informasi secara digital, serta tertarik mengikuti kegiatan sesuai minat. |
+| Demografis | Laki-laki dan perempuan berusia 17 tahun hingga 40 tahun keatas, meliputi pelajar, mahasiswa, pekerja, pelaku usaha, penyelenggara event, serta masyarakat umum.|
+| Geografis |Masyarakat dari berbagai wilayah, baik dalam negeri maupun luar negeri, termasuk pengguna yang berada di luar wilayah penyelenggaraan event dan ingin memperoleh informasi atau berpartisipasi dalam kegiatan yang tersedia. |
+| Psikografis |Individu yang memiliki minat dan ketertarikan untuk mengikuti berbagai kegiatan, seperti hiburan, pendidikan, pengembangan diri, kewirausahaan, seni, budaya, olahraga, kegiatan komunitas, maupun kegiatan lailnnya. |
+| Perilaku | Individu yang memanfaatkan perangkat smartphone dan jaringan internet untuk memperoleh informasi, mencari kegiatan, mempromosikan event, menemukan maupun mempunyai usaha, serta berpartisipasi dalam berbagai kegiatan sesuai minat dan kebutuhan. |
 
 ## 5. Deskripsi Aplikasi
 
@@ -224,11 +222,10 @@ Pengembangan VENMART menggunakan beberapa teknologi, library, dan sumber daya di
 | Sumber | Kegunaan | Lisensi/Referensi |
 |---|---|---|
 | [React Native](https://reactnative.dev/) | Framework pengembangan aplikasi mobile. | MIT License |
-| [Expo](https://expo.dev/) | Platform pengembangan aplikasi React Native. | Lisensi sesuai paket terkait |
+| [Expo](https://expo.dev/) | Platform pengembangan aplikasi React Native. | MIT License |
 | [Expo Router](https://docs.expo.dev/router/introduction/) | Pengelolaan navigasi aplikasi. | MIT License |
 | [Lucide Icons](https://lucide.dev/) | Penggunaan ikon pada antarmuka aplikasi. | ISC License |
 | [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins) | Tipografi aplikasi. | SIL Open Font License |
-| [React Native Safe Area Context](https://github.com/AppAndFlow/react-native-safe-area-context) | Pengaturan area aman perangkat. | MIT License |
 | [Unsplash](https://unsplash.com/) | Sumber gambar dan foto untuk kebutuhan visual aplikasi. | Unsplash License |
 
 ## 13. Repository
