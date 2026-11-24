@@ -34,7 +34,7 @@ const DetailEvent = () => {
       <View style={styles.container}>
         <Stack.Screen
           options={{
-            title: "Edit Profile",
+            title: "Detail Event",
           }}
         />
         <ScrollView showsVerticalScrollIndicator={false}>
