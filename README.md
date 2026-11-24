@@ -1,5 +1,4 @@
 # VENMART
-### Discover Events, Explore Opportunities.
 
 ## 1. Identitas Proyek
 
