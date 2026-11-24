@@ -15,7 +15,7 @@ import Lucide from "@react-native-vector-icons/lucide";
 
 const EditProfile = () => {
   return (
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <Stack.Screen
         options={{
           title: "Edit Profile",

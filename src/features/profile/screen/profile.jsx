@@ -1,7 +1,6 @@
 import React from "react";
-import { StyleSheet, ScrollView, Text, View } from "react-native";
+import { StyleSheet, ScrollView, Image, Text, View } from "react-native";
 import theme from "../../../theme/theme";
-import { Image } from "react-native";
 import CustomButton from "../../../shared/components/customButton";
 import CustomOptions from "../components/options";
 import { useRouter } from "expo-router";

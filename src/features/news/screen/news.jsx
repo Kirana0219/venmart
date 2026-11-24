@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import CategoryList from "../component/categoryList";
 import theme from "../../../theme/theme";
 import FuturedNewsList from "../component/futuredNewsList";
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         marginTop: 8,
     },
     futuredNewsText: {
-        fontSize: theme.fontSizes.lg,
+        fontSize: theme.fontSizes.md,
         fontFamily: theme.fontFamily.semibold
     },
     latestNewsContainer: {
@@ -59,8 +59,7 @@ const styles = StyleSheet.create({
     },
     latestNewsText: {
         fontFamily: theme.fontFamily.semibold,
-        fontSize: theme.fontSizes.lg,
-
+        fontSize: theme.fontSizes.md,
     }
 })
 

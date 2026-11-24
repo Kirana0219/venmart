@@ -9,6 +9,7 @@ const TabsLayout = () => {
                 options={
                     {
                         title: 'Home',
+                        headerShown: false,
                         tabBarIcon: ({color}) => <Lucide name="home" size={24} color={color}/>,
                     }
                 }/>
