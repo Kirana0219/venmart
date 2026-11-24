@@ -5,6 +5,7 @@ import event from "../data/dataEvent";
 import theme from "../../../theme/theme";
 import Lucide from "@react-native-vector-icons/lucide";
 import CustomButton from "../../../shared/components/customButton";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const DetailEvent = () => {
   const { id } = useLocalSearchParams();
@@ -26,120 +27,129 @@ const DetailEvent = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <Stack.Screen
-        options={{
-          title: "Edit Profile",
-        }}
-      />
-      <ScrollView showsVerticalScrollIndicator={false}>
-        {/* Image Cover Event */}
-        <Image
-          source={{ uri: item.image }}
-          style={styles.image}
-          resizeMode="cover"
+    <SafeAreaView
+      style={styles.safeArea}
+      edges={["bottom"]}
+    >
+      <View style={styles.container}>
+        <Stack.Screen
+          options={{
+            title: "Edit Profile",
+          }}
         />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          {/* Image Cover Event */}
+          <Image
+            source={{ uri: item.image }}
+            style={styles.image}
+            resizeMode="cover"
+          />
 
-        {/* Event Content */}
-        <View style={styles.contentContainer}>
-          {/* Category & Available Tickets */}
-          <View style={{ flexDirection: "row" }}>
-            <Text style={styles.category}>{item.category}</Text>
-            <Text style={styles.tickets}>{totalAvailable} tickets left</Text>
-          </View>
-
-          {/* Title Event */}
-          <Text style={styles.title}>{item.title}</Text>
-
-          {/* Organizer */}
-          <View style={styles.organizerContainer}>
-            <Image
-              source={{ uri: item.organizerImage }}
-              style={{ width: 50, height: 50, borderRadius: theme.radius.full }}
-            />
-            <View>
-              <Text style={styles.subTitle}>{item.organizer}</Text>
-              <Text style={styles.subInfo}>{item.organizerPhone}</Text>
+          {/* Event Content */}
+          <View style={styles.contentContainer}>
+            {/* Category & Available Tickets */}
+            <View style={{ flexDirection: "row" }}>
+              <Text style={styles.category}>{item.category}</Text>
+              <Text style={styles.tickets}>{totalAvailable} tickets left</Text>
             </View>
-            <View style={[styles.iconWrapper, { marginLeft: "auto" }]}>
-              <Lucide name="phone" style={{ fontSize: theme.fontSizes.md }} />
-            </View>
-          </View>
 
-          <View style={{ gap: 4, marginBottom: 12 }}>
-            {/* Date & Time */}
-            <View style={styles.eventInfoContainer}>
-              <View style={styles.iconWrapper}>
-                <Lucide
-                  name="calendar"
-                  style={{ fontSize: theme.fontSizes.md }}
-                />
-              </View>
+            {/* Title Event */}
+            <Text style={styles.title}>{item.title}</Text>
+
+            {/* Organizer */}
+            <View style={styles.organizerContainer}>
+              <Image
+                source={{ uri: item.organizerImage }}
+                style={{ width: 50, height: 50, borderRadius: theme.radius.full }}
+              />
               <View>
-                <Text style={styles.subTitle}>{item.date}</Text>
-                <Text style={styles.subInfo}>{item.time}</Text>
+                <Text style={styles.subTitle}>{item.organizer}</Text>
+                <Text style={styles.subInfo}>{item.organizerPhone}</Text>
+              </View>
+              <View style={[styles.iconWrapper, { marginLeft: "auto" }]}>
+                <Lucide name="phone" style={{ fontSize: theme.fontSizes.md }} />
               </View>
             </View>
 
-            {/* Location & Address */}
-            <View style={styles.eventInfoContainer}>
-              <View style={styles.iconWrapper}>
-                <Lucide
-                  name="map-pin"
-                  style={{ fontSize: theme.fontSizes.md }}
-                />
-              </View>
-              <View>
-                <Text style={styles.subTitle}>{item.location}</Text>
-                <Text style={styles.subInfo}>{item.address}</Text>
-              </View>
-            </View>
-          </View>
-
-          {/* About Event */}
-          <View style={{ gap: 4 }}>
-            <Text style={styles.subTitle}>About Event</Text>
-            <Text style={styles.contentText}>{item.description}</Text>
-          </View>
-
-          {/* Ticket Type */}
-          <View style={{ gap: 4 }}>
-            <Text style={styles.subTitle}>Select Ticket</Text>
-            {item.ticketOptions.map((ticket) => (
-              <View key={ticket.id} style={styles.ticketTypeContainer}>
+            <View style={{ gap: 4, marginBottom: 12 }}>
+              {/* Date & Time */}
+              <View style={styles.eventInfoContainer}>
+                <View style={styles.iconWrapper}>
+                  <Lucide
+                    name="calendar"
+                    style={{ fontSize: theme.fontSizes.md }}
+                  />
+                </View>
                 <View>
-                  <Text style={styles.subTitle}>{ticket.name}</Text>
-                  <Text style={styles.subInfo}>
-                    {ticket.available} tickets left
+                  <Text style={styles.subTitle}>{item.date}</Text>
+                  <Text style={styles.subInfo}>{item.time}</Text>
+                </View>
+              </View>
+
+              {/* Location & Address */}
+              <View style={styles.eventInfoContainer}>
+                <View style={styles.iconWrapper}>
+                  <Lucide
+                    name="map-pin"
+                    style={{ fontSize: theme.fontSizes.md }}
+                  />
+                </View>
+                <View>
+                  <Text style={styles.subTitle}>{item.location}</Text>
+                  <Text style={styles.subInfo}>{item.address}</Text>
+                </View>
+              </View>
+            </View>
+
+            {/* About Event */}
+            <View style={{ gap: 4 }}>
+              <Text style={styles.subTitle}>About Event</Text>
+              <Text style={styles.contentText}>{item.description}</Text>
+            </View>
+
+            {/* Ticket Type */}
+            <View style={{ gap: 4 }}>
+              <Text style={styles.subTitle}>Select Ticket</Text>
+              {item.ticketOptions.map((ticket) => (
+                <View key={ticket.id} style={styles.ticketTypeContainer}>
+                  <View>
+                    <Text style={styles.subTitle}>{ticket.name}</Text>
+                    <Text style={styles.subInfo}>
+                      {ticket.available} tickets left
+                    </Text>
+                  </View>
+                  <Text style={styles.price}>
+                    Rp{ticket.price.toLocaleString("id-ID")}
                   </Text>
                 </View>
-                <Text style={styles.price}>
-                  Rp{ticket.price.toLocaleString("id-ID")}
-                </Text>
-              </View>
-            ))}
+              ))}
+            </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
 
-      {/* Bottom Action */}
-      <View style={styles.bottomBar}>
-        <View>
-          <Text style={styles.subInfo}>Total Price</Text>
-          <Text style={[styles.price, { marginLeft: "none" }]}>
-            Rp{lowestPrice.toLocaleString("id-ID")}
-          </Text>
+        {/* Bottom Action */}
+        <View style={styles.bottomBar}>
+          <View>
+            <Text style={styles.subInfo}>Total Price</Text>
+            <Text style={[styles.price, { marginLeft: "none" }]}>
+              Rp{lowestPrice.toLocaleString("id-ID")}
+            </Text>
+          </View>
+          <CustomButton
+            title="Buy Ticket"
+            style={{ flex: 1, paddingVertical: theme.spacing.md }}
+          />
         </View>
-        <CustomButton
-          title="Buy Ticket"
-          style={{ flex: 1, paddingVertical: theme.spacing.md }}
-        />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: "white",
+  },
   container: {
     flex: 1,
     width: "100%",
