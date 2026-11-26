@@ -3,9 +3,8 @@ import { FlatList, View } from "react-native";
 
 import news from "../data/dataNews";
 import FuturedNewsCard from "./featuredNewsCard";
-import categories from "../data/category";
 
-const FeaturedNewsList = ({item, onPress, category}) => {
+const FeaturedNewsList = ({onPress}) => {
 
     const featuredNews = news
     .filter(item =>[22,17,15,20,7].includes(item.id));
@@ -15,7 +14,7 @@ const FeaturedNewsList = ({item, onPress, category}) => {
             <FlatList
                 horizontal
                 data={featuredNews}
-                keyExtractor={item => item.id.toString()}
+                keyExtractor={item => item.id}
                 showsHorizontalScrollIndicator={false}
                 ItemSeparatorComponent={() => (
                     <View style={{ width: 12 }} />

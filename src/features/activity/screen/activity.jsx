@@ -9,6 +9,7 @@ import ActivityList from "../component/activityList";
 const ActivityScreen = () => {
 
     const [selectedStatus, setSelectedStatus] = useState("Paid")
+    
     return(
         <ScrollView
             showsHorizontalScrollIndicator={false}

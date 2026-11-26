@@ -12,7 +12,7 @@ const CategoryList = () => {
             <FlatList
                 horizontal
                 data={categories}
-                keyExtractor={item => item.id.toString()}
+                keyExtractor={item => item.id}
                 showsHorizontalScrollIndicator={false}
                 renderItem={({ item }) => (
                     <CategoryCard

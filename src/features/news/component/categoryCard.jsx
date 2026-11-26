@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text } from "react-native";
 import theme from "../../../theme/theme";
 
 const CategoryCard = ({onPress, item, isSelected}) => {

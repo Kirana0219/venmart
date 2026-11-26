@@ -69,12 +69,12 @@ const styles = StyleSheet.create({
     date: {
         fontFamily: theme.fontFamily.semibold,
         fontSize: theme.fontSizes.sm,
-        color: "#7c7c7c"
+        color: theme.colors.neutral60
     },
     readTime: {
         fontFamily: theme.fontFamily.semibold,
         fontSize: theme.fontSizes.sm,
-        color: "#7c7c7c"
+        color: theme.colors.neutral60
     },
 });
 

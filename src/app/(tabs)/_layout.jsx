@@ -1,5 +1,6 @@
 import { Tabs } from "expo-router";
 import Lucide from "@react-native-vector-icons/lucide";
+import theme from "../../theme/theme";
 
 const TabsLayout = () => {
     return(
@@ -11,6 +12,7 @@ const TabsLayout = () => {
                         title: 'Home',
                         headerShown: false,
                         tabBarIcon: ({color}) => <Lucide name="home" size={24} color={color}/>,
+                        tabBarActiveTintColor: theme.colors.primary100
                     }
                 }/>
             <Tabs.Screen
@@ -18,8 +20,8 @@ const TabsLayout = () => {
                 options={
                     {
                         title: 'News',
-                        tabBarIcon: ({color}) => <Lucide name="newspaper" size={24} color={color}/>
-                    
+                        tabBarIcon: ({color}) => <Lucide name="newspaper" size={24} color={color}/>,
+                        tabBarActiveTintColor: theme.colors.primary100                       
                     }
                 }/>
             <Tabs.Screen
@@ -27,7 +29,8 @@ const TabsLayout = () => {
                 options={
                     {
                         title: 'Activity',
-                        tabBarIcon: ({color}) => <Lucide name="clipboard-list" size={24} color={color}/>
+                        tabBarIcon: ({color}) => <Lucide name="clipboard-list" size={24} color={color}/>,
+                        tabBarActiveTintColor: theme.colors.primary100
                     }
                 }/>
             <Tabs.Screen
@@ -35,7 +38,8 @@ const TabsLayout = () => {
                 options={
                     {
                         title: 'Profile',
-                        tabBarIcon: ({color}) => <Lucide name="user" size={24} color={color}/>
+                        tabBarIcon: ({color}) => <Lucide name="user" size={24} color={color}/>,
+                        tabBarActiveTintColor: theme.colors.primary100
                     }
                 }/>
         </Tabs>

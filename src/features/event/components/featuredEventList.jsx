@@ -3,7 +3,7 @@ import { FlatList, View } from "react-native";
 import event from "../data/dataEvent";
 import EventCard from "./eventCard";
 
-const FeaturedEventList = ({ item, onPress }) => {
+const FeaturedEventList = ({ onPress }) => {
   const featuredEvent = event.filter((item) =>
     [1, 2, 3, 4, 5].includes(item.id),
   );
@@ -13,7 +13,7 @@ const FeaturedEventList = ({ item, onPress }) => {
       <FlatList
         horizontal
         data={featuredEvent}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={item => item.id}
         showsHorizontalScrollIndicator={false}
         ItemSeparatorComponent={() => <View style={{ width: 12 }} />}
         renderItem={({ item }) => (

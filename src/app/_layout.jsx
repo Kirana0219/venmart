@@ -35,10 +35,9 @@ const Layout = () => {
     <Stack
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#ffff",
+          backgroundColor: "#ffffff",
         },
         headerTitleAlign: "center",
-        headerShadowVisible: false,
       }}
     >
       <Stack.Screen
